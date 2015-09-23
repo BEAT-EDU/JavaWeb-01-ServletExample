@@ -42,6 +42,10 @@ public class SayHelloServlet extends HttpServlet {
 		}
 		
 		StringBuilder hobbiesStr = new StringBuilder("");
+		/*
+		 * If more than two hobbies are selected, this logic inserts commas(,) and (and) properly. 
+		 * e.g swimming, painting and music.
+		 */
 		if(hobbies.length > 2){
 			for(int i = 0; i < hobbies.length - 2; i++){
 				hobbiesStr.append(hobbies[i]).append(", ");
@@ -49,6 +53,7 @@ public class SayHelloServlet extends HttpServlet {
 			hobbiesStr.append(hobbies[hobbies.length - 2]).append( " and ").append(hobbies[hobbies.length - 1]);
 		}
 		
+		//If exactly two hobbies are selected, (and) is inserted between the two
 		if(hobbies.length == 2){
 			hobbiesStr.append(hobbies[0]).append(" and ").append(hobbies[1]);
 		}
