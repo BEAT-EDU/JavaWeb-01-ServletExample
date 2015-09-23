@@ -74,6 +74,7 @@ public class SayHelloServlet extends HttpServlet {
 		html.append(	"</body>"); 
 		html.append("</html>");
 		
+		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		out.println(html);
 				
