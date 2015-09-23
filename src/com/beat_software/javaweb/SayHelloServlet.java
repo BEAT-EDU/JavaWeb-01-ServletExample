@@ -20,11 +20,18 @@ public class SayHelloServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String gender = request.getParameter("gender");
 		String[] hobbies = request.getParameterValues("hobby");
-		
+		//just for testing
 		System.out.println("--------name" + name);
 		System.out.println("--------gender" + gender);
 		System.out.println("--------hobbies" + hobbies);
-
+		
+		/*
+		 * To simplify the coding, assume that user has filled in or selected all
+		 * required fields and hence, request parameters are not null and NullPointerException
+		 * cannot occur.
+		 * 
+		 * In a real world application, you have to take care of validations of required fields. 
+		 */
 		String title = "";
 		if("M".equals(gender)){
 			title = "Mr. ";
