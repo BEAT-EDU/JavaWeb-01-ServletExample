@@ -50,7 +50,8 @@ public class SayHelloServlet extends HttpServlet {
 			for(int i = 0; i < hobbies.length - 2; i++){
 				hobbiesStr.append(hobbies[i]).append(", ");
 			}
-			hobbiesStr.append(hobbies[hobbies.length - 2]).append( " and ").append(hobbies[hobbies.length - 1]);
+			hobbiesStr.append(hobbies[hobbies.length - 2]).append( " and ")
+						.append(hobbies[hobbies.length - 1]);
 		}
 		
 		//If exactly two hobbies are selected, (and) is inserted between the two
@@ -67,9 +68,9 @@ public class SayHelloServlet extends HttpServlet {
 		html.append("<html>");
 		html.append(	"<body>");
 		html.append(		" <h1 align=center>Glad to know your hobbies!</h1>");
-		html.append(				"Hello ").append(title).append(name).append(". <br> <br>");
-		html.append(				"Glad to know you love ");
-		html.append(				hobbiesStr).append(".");
+		html.append(			"Hello ").append(title).append(name).append(". <br> <br>");
+		html.append(			"Glad to know you love ");
+		html.append(			hobbiesStr).append(".");
 		html.append(		"<br>");
 		html.append(	"</body>"); 
 		html.append("</html>");
